@@ -1,4 +1,4 @@
-require 'rails/all'
+require 'rails'
 require 'logstash-logger'
 require 'logstash-logger/railtie'
 

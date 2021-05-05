@@ -35,7 +35,7 @@ module LogStashLogger
       end
 
       def current_tags
-        Thread.current[:logstash_logger_tags] ||= []
+        Thread.current["logstash_logger_tags_#{object_id}"] ||= []
       end
     end
   end

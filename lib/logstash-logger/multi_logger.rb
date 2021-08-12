@@ -25,6 +25,10 @@ module LogStashLogger
       end
     end
 
+    def formatter
+      super || @loggers.map(&:formatter).compact.first
+    end
+
     def formatter=(formatter)
       super
       @loggers.each do |logger|
